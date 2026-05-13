@@ -1,6 +1,7 @@
 # **Powder: Upgrading Snow with Hard Finality and Faster Convergence**
 
 **Authors:** Rubie Proofie
+
 **Date:** May 2026
 
 ***
@@ -12,10 +13,11 @@ We present Powder, a practical leaderless Byzantine Fault Tolerant (BFT) consens
 (ii) “seen‑votes” counters that aggregate global opinion, and
 (iii) zero‑knowledge (ZK) proofs that enforce non‑equivocation and correct counting.
 
-We prove that Powder decides in $O(\log n)$ rounds, with exponentially small decision error, and improves upon vanilla Snow in three concrete ways:
+We prove that Powder decides in $O(\log n)$ rounds, with exponentially small decision error, and improves upon vanilla Snow in four concrete ways:
 
 - convergence is about **30–40% faster** in expected rounds,
 - the protocol is **robust against adversarial topology and clustering**,
+- **hard finality** is reachable once a counter has been signed by the majority of nodes,
 - and safety is **near‑deterministic**, with provable, public evidence of any cheating.
 
 All results are formal and quantitative, but we keep the explanations and core proofs simple and intuitive. The protocol remains lightweight and scalable for large‑scale blockchains.
