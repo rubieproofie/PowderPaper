@@ -95,11 +95,7 @@ In each round, every node:
         - $\sigma_j$ is a signature on $(c_j, m_j)$.
         - $\pi_j$ is a ZK proof that $c_j$ and $m_j$ are consistent with the protocol (no equivocation, correct counting).
 3. **Updates its own counter:**
-    - Computes
-
-$$
-m_i^{(t)} = 1 + \sum_{\substack{j \in S_i \\ c_j = c_i}} m_j^{(t-1)}.
-$$
+    - Computes $$ m_i^{(t)} = 1 + \sum\limits_{j \in S_i \,:\, c_j = c_i} m_j^{(t-1)} $$
     - Clips the result: $m_i^{(t)} \gets \min(m_i^{(t)}, M)$.
     - Here, $1$ counts the node’s own vote; the sum aggregates the votes seen by its peers.
 4. **Generates ZK proofs:**
